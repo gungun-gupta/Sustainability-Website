@@ -411,14 +411,14 @@ section {
 /* Services Section */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .service-card {
     background: var(--white);
     border-radius: 20px;
-    padding: 50px 40px;
+    padding: 35px 25px;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     border: 1px solid var(--border-color);
@@ -447,16 +447,16 @@ section {
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     background: var(--bg-cloud);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 28px;
     color: var(--primary-green);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     transition: var(--transition);
 }
 
@@ -467,13 +467,15 @@ section {
 }
 
 .service-content h3 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 .service-content p {
     color: var(--text-color);
-    margin-bottom: 25px;
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
 .service-link {
@@ -497,6 +499,12 @@ section {
 
 .service-link:hover i {
     transform: translateX(5px);
+}
+
+@media (max-width: 991px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {

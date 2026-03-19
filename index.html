@@ -29,7 +29,8 @@
             <div class="header-inner">
                 <div class="logo">
                     <a href="#">
-                        <img src="assets/images/logo.jpeg" alt="Cirqulus Solutions" style="max-height: 120px; width: auto;">
+                        <img src="assets/images/logo.jpeg" alt="Cirqulus Solutions"
+                            style="max-height: 120px; width: auto;">
                     </a>
                 </div>
                 <nav class="main-nav">
@@ -55,13 +56,15 @@
         <div class="container relative z-index-1">
             <div class="hero-inner">
                 <div class="hero-content animate-from-left">
-                    <span class="section-subtitle">WELCOME TO SOLARVA</span>
-                    <h1 class="hero-title">Expert Solar service since 1998</h1>
-                    <p class="hero-desc">We believe in sustainable energy practices. Solarva provides complete solar
-                        solutions tailored to your needs, powering a greener tomorrow.</p>
+                    <span class="section-subtitle">Circular Economy Enablers</span>
+                    <h1 class="hero-title">Closing the Loop. Intelligently.</h1>
+                    <p class="hero-desc">Cirqulus Solutions bridges the gap between waste and value — connecting
+                        producers, recyclers, and regulators through a seamless, technology-driven platform for a
+                        genuinely sustainable tomorrow.</p>
                     <div class="hero-btns">
-                        <a href="#" class="btn btn-primary">Discover More <i class="fas fa-arrow-right ml-10"></i></a>
-                        <a href="#" class="btn btn-outline ml-20">How It Work</a>
+                        <a href="#" class="btn btn-primary">Explore our services <i
+                                class="fas fa-arrow-right ml-10"></i></a>
+                        <a href="#" class="btn btn-outline ml-20">Learn about ERP</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -71,35 +74,195 @@
         </div>
     </section>
 
+    <!-- Our Impact Section -->
+    <section class="impact bg-dark" id="impact" style="padding: 80px 0;">
+        <div class="container">
+            <div class="section-header text-center mb-50">
+                <span class="section-subtitle" style="color: #2ea757;">OUR IMPACT</span>
+                <h2 class="section-title" style="color: #fff;">Numbers that matter</h2>
+                <p
+                    style="max-width: 700px; margin: 15px auto 0; color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.6;">
+                    Built on the belief that responsible waste management and profitable business are not at odds —
+                    they're two sides of the same circle.
+                </p>
+            </div>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center;">
+                <div class="impact-item animate-from-right"
+                    style="padding: 40px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); border-bottom: 3px solid #2ea757; transition: transform 0.3s ease;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; color: #2ea757; margin-bottom: 10px; line-height: 1;">
+                        <span class="counter-val" data-target="20">0</span>+
+                    </div>
+                    <p style="font-weight: 500; font-size: 1.1rem; margin: 0; color: #fff;">States & UTs Served Across
+                        India</p>
+                </div>
+                <div class="impact-item animate-from-right"
+                    style="transition-delay: 0.1s; padding: 40px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); border-bottom: 3px solid #2ea757; transition: transform 0.3s ease;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; color: #2ea757; margin-bottom: 10px; line-height: 1;">
+                        <span class="counter-val" data-target="50">0</span>K+
+                    </div>
+                    <p style="font-weight: 500; font-size: 1.1rem; margin: 0; color: #fff;">Metric Tonnes of Waste
+                        Channelized</p>
+                </div>
+                <div class="impact-item animate-from-right"
+                    style="transition-delay: 0.2s; padding: 40px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); border-bottom: 3px solid #2ea757; transition: transform 0.3s ease;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; color: #2ea757; margin-bottom: 10px; line-height: 1;">
+                        <span class="counter-val" data-target="500">0</span>+
+                    </div>
+                    <p style="font-weight: 500; font-size: 1.1rem; margin: 0; color: #fff;">Verified Recycler &
+                        Refurbisher Partners</p>
+                </div>
+                <div class="impact-item animate-from-right"
+                    style="transition-delay: 0.3s; padding: 40px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); border-bottom: 3px solid #2ea757; transition: transform 0.3s ease;">
+                    <div
+                        style="font-size: 3.5rem; font-weight: 800; color: #2ea757; margin-bottom: 10px; line-height: 1;">
+                        <span class="counter-val" data-target="300">0</span>+
+                    </div>
+                    <p style="font-weight: 500; font-size: 1.1rem; margin: 0; color: #fff;">Brands & Producers Onboarded
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const counters = document.querySelectorAll('.counter-val');
+                    const speed = 100;
+
+                    const animateCounters = () => {
+                        counters.forEach(counter => {
+                            const updateCount = () => {
+                                const target = +counter.getAttribute('data-target');
+                                const count = +counter.innerText;
+                                const inc = target / speed;
+
+                                if (count < target) {
+                                    counter.innerText = Math.ceil(count + inc);
+                                    setTimeout(updateCount, 20);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCount();
+                        });
+                    };
+
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                animateCounters();
+                                observer.disconnect();
+                            }
+                        });
+                    }, { threshold: 0.3 });
+
+                    const impactSection = document.getElementById('impact');
+                    if (impactSection) {
+                        observer.observe(impactSection);
+                    }
+                });
+            </script>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header text-center mb-50">
                 <span class="section-subtitle">OUR SERVICES</span>
-                <h2 class="section-title">Complete solar solution with repair services</h2>
+                <h2 class="section-title">End-to-end circular waste solutions</h2>
             </div>
             <div class="services-grid">
                 <!-- Service Card 1 -->
                 <div class="service-card animate-from-right">
-                    <div class="service-icon">
-                        <i class="fas fa-solar-panel"></i>
+                    <div class="service-icon"
+                        style="font-size: 2.5rem; display: flex; align-items: center; justify-content: center; font-style: normal;">
+                        ♻️
                     </div>
                     <div class="service-content">
-                        <h3>Solar System Installation</h3>
-                        <p>We provide complete solar systems for homes and businesses, offering reliable and
-                            eco-friendly power solutions.</p>
+                        <span class="service-category"
+                            style="color: #2ea757; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;">Regulatory</span>
+                        <h3>EPR Compliance Management</h3>
+                        <p>Navigate India's Extended Producer Responsibility regulations with confidence. We handle
+                            documentation, reporting, and regulatory submissions end-to-end on your behalf.</p>
                         <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <!-- Service Card 2 -->
-                <div class="service-card animate-from-right" style="transition-delay: 0.2s;">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                <div class="service-card animate-from-right" style="transition-delay: 0.1s;">
+                    <div class="service-icon"
+                        style="font-size: 2.5rem; display: flex; align-items: center; justify-content: center; font-style: normal;">
+                        💻
                     </div>
                     <div class="service-content">
-                        <h3>Maintenance & Repair</h3>
-                        <p>Our expert technicians ensure your solar panels operate at peak efficiency with professional
-                            maintenance services.</p>
+                        <span class="service-category"
+                            style="color: #2ea757; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;">E-Waste</span>
+                        <h3>E-Waste Recycling</h3>
+                        <p>Responsible collection, dismantling, and processing of electronic waste — from consumer
+                            devices to industrial equipment — with full audit trails and MoEFCC-compliant disposal.</p>
+                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card animate-from-right" style="transition-delay: 0.2s;">
+                    <div class="service-icon"
+                        style="font-size: 2.5rem; display: flex; align-items: center; justify-content: center; font-style: normal;">
+                        🧴
+                    </div>
+                    <div class="service-content">
+                        <span class="service-category"
+                            style="color: #2ea757; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;">Plastic</span>
+                        <h3>Plastic Waste Management</h3>
+                        <p>Collect, segregate, and channel post-consumer plastic waste into verified recycling streams.
+                            We support brands in meeting PWM Rules targets with complete traceability.</p>
+                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="service-card animate-from-right" style="transition-delay: 0.3s;">
+                    <div class="service-icon"
+                        style="font-size: 2.5rem; display: flex; align-items: center; justify-content: center; font-style: normal;">
+                        🔋
+                    </div>
+                    <div class="service-content">
+                        <span class="service-category"
+                            style="color: #2ea757; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;">Battery</span>
+                        <h3>Battery Waste Processing</h3>
+                        <p>Compliant collection and recycling of used batteries — from lead-acid to lithium-ion —
+                            ensuring hazardous materials are processed safely and responsibly.</p>
+                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="service-card animate-from-right" style="transition-delay: 0.4s;">
+                    <div class="service-icon"
+                        style="font-size: 2.5rem; display: flex; align-items: center; justify-content: center; font-style: normal;">
+                        🚗
+                    </div>
+                    <div class="service-content">
+                        <span class="service-category"
+                            style="color: #2ea757; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;">Tyre</span>
+                        <h3>Tyre Waste Management</h3>
+                        <p>End-of-life tyre collection and routing to retreaders, crumb rubber processors, and
+                            co-processing units — cutting landfill and generating secondary resources.</p>
+                        <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="service-card animate-from-right" style="transition-delay: 0.5s;">
+                    <div class="service-icon"
+                        style="font-size: 2.5rem; display: flex; align-items: center; justify-content: center; font-style: normal;">
+                        📡
+                    </div>
+                    <div class="service-content">
+                        <span class="service-category"
+                            style="color: #2ea757; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 10px; display: block;">Technology</span>
+                        <h3>Digital Waste Traceability</h3>
+                        <p>QR-code-enabled tracking for every kilogram of material — from generator to recycler.
+                            Real-time dashboards keep producers, auditors, and regulators aligned.</p>
                         <a href="#" class="service-link">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
@@ -113,42 +276,54 @@
             <div class="why-choose-inner">
                 <div class="why-choose-content">
                     <span class="section-subtitle">WHY CHOOSE US</span>
-                    <h2 class="section-title">We are building a sustainable future</h2>
+                    <h2 class="section-title">Built for India's circular economy future</h2>
 
                     <div class="accordion" id="accordion">
                         <div class="accordion-item active">
                             <button class="accordion-header">
                                 <span class="accordion-number">01</span>
-                                Renewable Energy Mission
+                                Environmental Integrity
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="accordion-body" style="display: block;">
-                                <p>We are dedicated to providing clean, renewable energy solutions to help reduce carbon
-                                    footprint and build a more sustainable world for future generations.</p>
+                                <p>Every kg of waste we handle is processed through verified, authorised recyclers with
+                                    zero tolerance for illegal dumping.</p>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <button class="accordion-header">
                                 <span class="accordion-number">02</span>
-                                Expert Installation
+                                Tech-First Approach
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="accordion-body">
-                                <p>Our team of certified professionals ensures high-quality, efficient, and safe
-                                    installation of all solar equipment, tailored to your specific needs.</p>
+                                <p>Digital dashboards, QR-code traceability, and automated compliance reports — built
+                                    for the modern producer.</p>
                             </div>
                         </div>
 
                         <div class="accordion-item">
                             <button class="accordion-header">
                                 <span class="accordion-number">03</span>
-                                24/7 Support Services
+                                Ecosystem Partnerships
                                 <i class="fas fa-chevron-down"></i>
                             </button>
                             <div class="accordion-body">
-                                <p>We provide continuous monitoring and round-the-clock support to guarantee your solar
-                                    system's maximum performance and longevity.</p>
+                                <p>Recyclers, aggregators, and brands — we orchestrate relationships across the value
+                                    chain so nothing falls through the cracks.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span class="accordion-number">04</span>
+                                Regulatory Alignment
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="accordion-body">
+                                <p>Deep familiarity with MoEFCC, CPCB, and state PCB frameworks ensures your compliance
+                                    posture is always audit ready.</p>
                             </div>
                         </div>
                     </div>
@@ -174,24 +349,40 @@
                                 <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
                             </defs>
                             <text font-size="12" font-weight="bold" letter-spacing="2">
-                                <textPath href="#circle">SOLARVA SOLAR ENERGY • EST 1998 • </textPath>
+                                <textPath href="#circle">RECYCLE • TRACE • COMPLY • </textPath>
                             </text>
                         </svg>
                         <div class="badge-icon"><i class="fas fa-sun"></i></div>
                     </div>
                 </div>
                 <div class="about-content">
-                    <span class="section-subtitle">ABOUT COMPANY</span>
-                    <h2 class="section-title">Solarva believes in sustainable energy practices</h2>
-                    <p class="mb-30">We are committed to delivering the highest quality solar power solutions. Our team
-                        of experts works tirelessly to ensure that your transition to renewable energy is seamless and
-                        efficient.</p>
-                    <ul class="about-list mb-40">
-                        <li><i class="fas fa-check-circle text-green"></i> Highest Quality Solar Panels</li>
-                        <li><i class="fas fa-check-circle text-green"></i> Experienced and Certified Team</li>
-                        <li><i class="fas fa-check-circle text-green"></i> 100% Customer Satisfaction</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Know More About Us</a>
+                    <span class="section-subtitle" style="margin-bottom: 10px;">ABOUT COMPANY</span>
+                    <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 15px; line-height: 1.2;">We
+                        believe in sustainable energy practices</h2>
+                    <div style="font-size: 0.95rem; line-height: 1.5;">
+                        <p style="margin-bottom: 15px;">Cirqulus Solutions Private Limited is a technology-enabled waste
+                            management
+                            company
+                            working at the intersection of sustainability and compliance. We connect waste generators,
+                            collectors, recyclers, and regulators on a unified platform — making circular flows
+                            transparent,
+                            traceable, and commercially viable.</p>
+
+                        <p style="margin-bottom: 15px;">Founded in Raipur, Chhattisgarh, we bring deep operational
+                            expertise across
+                            multiple waste
+                            streams and regulatory frameworks. Our team combines environmental science, logistics
+                            intelligence, and software to deliver end-to-end solutions that actually work on the ground.
+                        </p>
+
+                        <p style="margin-bottom: 20px;">We believe a circular economy isn't just a concept — it's a
+                            business model. And
+                            we're building
+                            the infrastructure to make it real, at scale, across India.</p>
+                    </div>
+
+                    <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 0.95rem;">Know More About
+                        Us</a>
                 </div>
             </div>
         </div>
@@ -478,11 +669,12 @@
                 <div class="footer-col">
                     <div class="footer-logo logo mb-30">
                         <a href="#">
-                            <img src="assets/images/logo.jpeg" alt="Cirqulus Solutions" style="max-height: 120px; width: auto;">
+                            <img src="assets/images/logo.jpeg" alt="Cirqulus Solutions"
+                                style="max-height: 120px; width: auto;">
                         </a>
                     </div>
-                    <p class="footer-desc mb-30">We provide high-quality solar panel installations and maintenance
-                        services to help you save energy and money.</p>
+                    <p class="footer-desc mb-30">We provide technology-driven waste management and EPR compliance
+                        solutions to help businesses achieve sustainable circular economy goals.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -508,11 +700,11 @@
                 <div class="footer-col">
                     <h3 class="footer-title">Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Solar Planning</a></li>
-                        <li><a href="#">System Installation</a></li>
-                        <li><a href="#">Maintenance & Repair</a></li>
-                        <li><a href="#">Energy Upgrades</a></li>
-                        <li><a href="#">Commercial Solar</a></li>
+                        <li><a href="#">EPR Compliance Management</a></li>
+                        <li><a href="#">E-Waste Recycling</a></li>
+                        <li><a href="#">Plastic Waste Management</a></li>
+                        <li><a href="#">Battery Waste Processing</a></li>
+                        <li><a href="#">Tyre Waste Management</a></li>
                     </ul>
                 </div>
 
@@ -529,7 +721,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 Solarva. All Rights Reserved. Designed to replicate the original.</p>
+                <p>&copy; 2025 Cirqulus Solutions Pvt. Ltd. · Raipur, Chhattisgarh · All Rights Reserved.</p>
             </div>
         </div>
     </footer>
